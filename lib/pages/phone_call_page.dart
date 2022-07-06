@@ -1,6 +1,7 @@
 import 'package:apointment/constants/colors.dart';
 import 'package:apointment/widgets/big_text.dart';
 import 'package:apointment/widgets/circular_icon.dart';
+import 'package:apointment/widgets/circulat_image.dart';
 import 'package:apointment/widgets/small_text.dart';
 import 'package:flutter/material.dart';
 
@@ -16,20 +17,7 @@ class PhoneCallPage extends StatelessWidget {
         width: double.maxFinite,
         child: Column(
           children: [
-            Container(
-              padding: const EdgeInsets.all(4),
-              width: 100,
-              height: 100,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(50),
-                border: Border.all(color: Colors.white, width: 4) ,
-                color: Colors.white,
-                image:const DecorationImage(
-                  image: AssetImage('assets/team-2.jpg',),
-                  fit: BoxFit.cover,
-                ),
-              ),
-            ),
+            CircularImage(),
             const SizedBox(
               height: 30,
             ),
