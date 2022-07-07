@@ -69,8 +69,10 @@ class _ProfilePageOneState extends State<ProfilePageOne> {
                 children: [
                   Row(
                     children: [
-                      const RectangleImage(image: 'assets/team-2.jpg',),
-                       SizedBox(
+                      const RectangleImage(
+                        image: 'assets/team-2.jpg',
+                      ),
+                      SizedBox(
                         width: Dimension.height70,
                       ),
                       Column(
@@ -87,7 +89,12 @@ class _ProfilePageOneState extends State<ProfilePageOne> {
                   const SizedBox(
                     height: 15,
                   ),
-                  const LargButton(text: "Edit Profile"),
+                  GestureDetector(
+                    child: const LargButton(text: "Edit Profile"),
+                    onTap: (){
+                      
+                    },
+                  ),
                   const SizedBox(
                     height: 5,
                   ),
@@ -128,17 +135,14 @@ class _ProfilePageOneState extends State<ProfilePageOne> {
                                 const SizedBox(
                                   height: 15,
                                 ),
-                                
                               ],
                             ),
                           ),
                           Column(
-                                  children: List.generate(4, (index) {
-                                    return IncludedProgram();
-                                  }),
-                                )
-                         
-                          
+                            children: List.generate(4, (index) {
+                              return IncludedProgram();
+                            }),
+                          )
                         ],
                       ),
                     ),
