@@ -1,6 +1,6 @@
 # apointment
 
-This is the project that i have done basen on inspiration that i have seen on pintres.
+This is the project that i have done based on inspiration that i have seen on pintres.
 ![ui8.net](https://i.pinimg.com/originals/24/b5/c2/24b5c209c3ed6f1d5f5a346dad1c081b.jpg)
 ## Getting Started
 
