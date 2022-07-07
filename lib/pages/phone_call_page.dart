@@ -1,4 +1,5 @@
 import 'package:apointment/constants/colors.dart';
+import 'package:apointment/utility/dimention.dart';
 import 'package:apointment/widgets/big_text.dart';
 import 'package:apointment/widgets/circular_icon.dart';
 import 'package:apointment/widgets/circulat_image.dart';
@@ -18,8 +19,8 @@ class PhoneCallPage extends StatelessWidget {
         child: Column(
           children: [
             CircularImage(),
-            const SizedBox(
-              height: 30,
+            SizedBox(
+              height: Dimension.height30,
             ),
             const BigText(text: "Dr. Wisteri Revenciaw"),
             const SizedBox(

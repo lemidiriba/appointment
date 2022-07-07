@@ -13,7 +13,7 @@ class IncludedProgram extends StatelessWidget {
       children: [
         Row(
           children: [
-            const RectangleImage(image: 'assets/team-1.jpg'),
+            const RectangleImage(image: 'assets/team-1.jpg',border: false,),
             const SizedBox(
               width: 15,
             ),

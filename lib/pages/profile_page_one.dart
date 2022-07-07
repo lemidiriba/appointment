@@ -1,8 +1,10 @@
 import 'dart:convert';
 
 import 'package:apointment/constants/colors.dart';
+import 'package:apointment/utility/dimention.dart';
 import 'package:apointment/widgets/big_text.dart';
 import 'package:apointment/widgets/column_text.dart';
+import 'package:apointment/widgets/custom_bottom_navigation_bar.dart';
 import 'package:apointment/widgets/included_program.dart';
 import 'package:apointment/widgets/larg_button.dart';
 import 'package:apointment/widgets/rectangle_image.dart';
@@ -24,11 +26,11 @@ class _ProfilePageOneState extends State<ProfilePageOne> {
       body: Stack(
         children: [
           Positioned(
-            top: 40,
+            top: Dimension.height40,
             left: 0,
             right: 0,
             child: Container(
-              width: 100,
+              width: Dimension.height100,
               padding: const EdgeInsets.only(left: 16, right: 16),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -50,7 +52,7 @@ class _ProfilePageOneState extends State<ProfilePageOne> {
             ),
           ),
           Positioned(
-            top: 80,
+            top: Dimension.height80,
             left: 0,
             right: 0,
             bottom: 0,
@@ -67,9 +69,9 @@ class _ProfilePageOneState extends State<ProfilePageOne> {
                 children: [
                   Row(
                     children: [
-                      const RectangleImage(image: 'assets/team-2.jpg'),
-                      const SizedBox(
-                        width: 70,
+                      const RectangleImage(image: 'assets/team-2.jpg',),
+                       SizedBox(
+                        width: Dimension.height70,
                       ),
                       Column(
                         children: const [
@@ -99,7 +101,7 @@ class _ProfilePageOneState extends State<ProfilePageOne> {
                         children: [
                           Container(
                             margin: const EdgeInsets.only(top: 20, bottom: 10),
-                            height: 55,
+                            height: Dimension.height55,
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
@@ -145,47 +147,7 @@ class _ProfilePageOneState extends State<ProfilePageOne> {
               ),
             ),
           ),
-          Positioned(
-            bottom: 15,
-            left: 0,
-            right: 0,
-            child: Container(
-              height: 60,
-              margin: const EdgeInsets.only(left: 10, right: 10),
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20), color: Colors.white),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: const [
-                  Icon(
-                    Icons.home_outlined,
-                    color: Colors.grey,
-                    size: 25,
-                  ),
-                  Icon(
-                    Icons.calendar_month_outlined,
-                    color: Colors.grey,
-                    size: 25,
-                  ),
-                  Icon(
-                    Icons.search_outlined,
-                    color: Colors.grey,
-                    size: 25,
-                  ),
-                  Icon(
-                    Icons.person_pin_outlined,
-                    color: Colors.grey,
-                    size: 25,
-                  ),
-                  Icon(
-                    Icons.person_outline,
-                    color: AppColors.secondaryColor,
-                    size: 25,
-                  ),
-                ],
-              ),
-            ),
-          ),
+          CustomBottomNavigationBar()
         ],
       ),
     );
