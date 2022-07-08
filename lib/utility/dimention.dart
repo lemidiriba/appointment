@@ -16,6 +16,9 @@ class Dimension {
   static double height25 = screenHeight / 31.2;
   static double height10 = screenHeight / 78.0;
 
+  static double width10 = screenWidth / 45;
+
+
   //profile page two
   static double width190 = screenWidth / 2.3684;
   static double height150 = screenHeight / 5.2;

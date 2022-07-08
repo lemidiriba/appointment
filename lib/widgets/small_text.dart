@@ -17,7 +17,9 @@ class SmallText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       text,
-      style: TextStyle(color: color, fontSize: size, letterSpacing: 1.5,fontWeight: boldFont == true? FontWeight.bold:FontWeight.normal),
+      overflow: TextOverflow.ellipsis,
+      maxLines: 3,
+      style: TextStyle(color: color, fontSize: size, letterSpacing: 1.5, fontWeight: boldFont == true? FontWeight.bold:FontWeight.normal,),
     );
   }
 }

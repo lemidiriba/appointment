@@ -9,13 +9,15 @@ class IncludedProgram extends StatelessWidget {
   final String textOne;
   final String textTwo;
   final String smallText;
-  const IncludedProgram({
-    Key? key,
-    required this.image,
-    required this.textOne,
-    required this.textTwo,
-    required this.smallText,
-  }) : super(key: key);
+  final bool showMore;
+  const IncludedProgram(
+      {Key? key,
+      required this.image,
+      required this.textOne,
+      required this.textTwo,
+      required this.smallText,
+      this.showMore = true})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -43,7 +45,7 @@ class IncludedProgram extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                   const Icon(
+                    const Icon(
                       Icons.pin_drop,
                       color: Colors.grey,
                     ),
@@ -58,21 +60,24 @@ class IncludedProgram extends StatelessWidget {
           margin: const EdgeInsets.only(top: 15, bottom: 15),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: const [
+            children: [
               SmallText(text: "March 21_2019 / 9:30 AM "),
-              SmallText(
-                text: "More...",
-                color: AppColors.secondaryColor,
-              ),
+              showMore == true
+                  ? SmallText(
+                      text: "More...",
+                      color: AppColors.secondaryColor,
+                    )
+                  : Container(),
             ],
           ),
         ),
-        const Divider(
-          height: 10,
-          color: AppColors.bgColor,
-        ),
+        if (showMore)
+          const Divider(
+            height: 10,
+            color: AppColors.bgColor,
+          ),
         const SizedBox(
-          height: 15,
+          height: 10,
         )
       ],
     );
