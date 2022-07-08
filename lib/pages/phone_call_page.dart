@@ -38,9 +38,9 @@ class PhoneCallPage extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: const [
-                  CirculatIcon(icon: Icons.music_note_outlined),
-                  CirculatIcon(icon: Icons.play_arrow_outlined),
-                  CirculatIcon(icon: Icons.stop_circle_outlined),
+                  CirculatIcon(icon: Icons.volume_down_outlined),
+                  CirculatIcon(icon: Icons.pause_outlined),
+                  CirculatIcon(icon: Icons.mic_none_outlined),
                 ],
               ),
             ),

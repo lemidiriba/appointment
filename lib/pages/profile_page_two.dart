@@ -105,7 +105,7 @@ class _ProfilePageOneState extends State<ProfilePageTwo> {
                     color: AppColors.bgColor,
                   ),
                   Container(
-                    margin: const EdgeInsets.only(top: 20, bottom: 10),
+                    margin: const EdgeInsets.only(top: 20 ),
                     height: Dimension.height55,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -128,9 +128,7 @@ class _ProfilePageOneState extends State<ProfilePageTwo> {
                             ],
                           ),
                         ),
-                        const SizedBox(
-                          height: 15,
-                        ),
+                        
                       ],
                     ),
                   ),
