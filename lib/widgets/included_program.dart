@@ -5,7 +5,17 @@ import 'package:apointment/widgets/small_text.dart';
 import 'package:flutter/material.dart';
 
 class IncludedProgram extends StatelessWidget {
-  const IncludedProgram({Key? key}) : super(key: key);
+  final String image;
+  final String textOne;
+  final String textTwo;
+  final String smallText;
+  const IncludedProgram({
+    Key? key,
+    required this.image,
+    required this.textOne,
+    required this.textTwo,
+    required this.smallText,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -13,28 +23,31 @@ class IncludedProgram extends StatelessWidget {
       children: [
         Row(
           children: [
-            const RectangleImage(image: 'assets/team-1.jpg',border: false,),
+            RectangleImage(
+              image: image,
+              border: false,
+            ),
             const SizedBox(
               width: 15,
             ),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const ColumnText(
-                  textOne: "Penny Tool",
-                  textTwo: "Arobics",
+                ColumnText(
+                  textOne: textOne,
+                  textTwo: textTwo,
                 ),
                 const SizedBox(
                   width: 15,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: const [
-                    Icon(
+                  children: [
+                   const Icon(
                       Icons.pin_drop,
                       color: Colors.grey,
                     ),
-                    SmallText(text: " 931 Oclahama NY - 750m away "),
+                    SmallText(text: smallText),
                   ],
                 ),
               ],
@@ -58,7 +71,9 @@ class IncludedProgram extends StatelessWidget {
           height: 10,
           color: AppColors.bgColor,
         ),
-        const SizedBox(height: 15,)
+        const SizedBox(
+          height: 15,
+        )
       ],
     );
   }

@@ -9,16 +9,18 @@ import 'package:apointment/widgets/included_program.dart';
 import 'package:apointment/widgets/larg_button.dart';
 import 'package:apointment/widgets/rectangle_image.dart';
 import 'package:apointment/widgets/small_text.dart';
+import 'package:apointment/widgets/traning_program%20.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
-class ProfilePageOne extends StatefulWidget {
-  ProfilePageOne({Key? key}) : super(key: key);
+class ProfilePageTwo extends StatefulWidget {
+  ProfilePageTwo({Key? key}) : super(key: key);
 
   @override
-  State<ProfilePageOne> createState() => _ProfilePageOneState();
+  State<ProfilePageTwo> createState() => _ProfilePageOneState();
 }
 
-class _ProfilePageOneState extends State<ProfilePageOne> {
+class _ProfilePageOneState extends State<ProfilePageTwo> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -70,18 +72,18 @@ class _ProfilePageOneState extends State<ProfilePageOne> {
                   Row(
                     children: [
                       const RectangleImage(
-                        image: 'assets/team-2.jpg',
+                        image: 'assets/team-1.jpg',
                       ),
                       SizedBox(
                         width: Dimension.height70,
                       ),
                       Column(
                         children: const [
-                          BigText(text: "Piff Jenkins"),
+                          BigText(text: "Lemi Diriba"),
                           SizedBox(
                             height: 10,
                           ),
-                          SmallText(text: "#Jpiff_enkins")
+                          SmallText(text: "#lee_drib")
                         ],
                       )
                     ],
@@ -91,7 +93,9 @@ class _ProfilePageOneState extends State<ProfilePageOne> {
                   ),
                   GestureDetector(
                     child: const LargButton(text: "Edit Profile"),
-                    onTap: () {},
+                    onTap: () {
+                      print(Get.size.height);
+                    },
                   ),
                   const SizedBox(
                     height: 5,
@@ -131,13 +135,15 @@ class _ProfilePageOneState extends State<ProfilePageOne> {
                     ),
                   ),
                   Expanded(
-                    child: SingleChildScrollView(
-                        child: Column(
-                      children: List.generate(4, (index) {
-                        return IncludedProgram(image: 'assets/team-${index +1}.jpg',textOne: "Piff Jack", textTwo: "#piff_jack", smallText: "931 Oclohama Ny - 150m away",);
-                      }),
-                    )),
-                  )
+                      child: GridView.count(
+                    crossAxisCount: 2,
+                    children: List.generate(
+                      4,
+                      (index) {
+                        return TraningProgram(image: "assets/team-${index +1 }.jpg",textOne: "Gustra Purplson",textTwo: "Arobic Workout",);
+                      },
+                    ),
+                  ))
                 ],
               ),
             ),
