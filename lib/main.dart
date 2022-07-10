@@ -2,6 +2,7 @@ import 'package:apointment/pages/phone_call_page.dart';
 import 'package:apointment/pages/profile_page_one.dart';
 import 'package:apointment/pages/profile_page_two.dart';
 import 'package:apointment/pages/trainer_profile_about.dart';
+import 'package:apointment/pages/trainer_profile_location.dart';
 import 'package:apointment/pages/trainer_profile_one.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
        
         primarySwatch: Colors.blue,
       ),
-      home: TrainerProfilePageAbout(),
+      home: TrainerProfilePageLocation(),
       
     );
   }

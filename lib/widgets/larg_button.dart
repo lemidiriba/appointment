@@ -10,7 +10,7 @@ class LargButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: 250,
-      height: 50,
+      height: 45,
       decoration: BoxDecoration(
         color: AppColors.secondaryColor,
         borderRadius: BorderRadius.circular(25)

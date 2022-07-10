@@ -4,7 +4,7 @@ class Dimension {
   static double screenHeight = Get.height;
   static double screenWidth = Get.width;
 
-  //container haight 
+  //container height 
   static double height100 = screenHeight / 7.80;
   static double height80 = screenHeight / 9.75;
   static double height70 = screenHeight / 11.14;
