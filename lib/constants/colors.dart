@@ -7,4 +7,5 @@ class AppColors {
 
   static const defaultPadding = 16.0;
   static const Color textColor = Color(0xFFFFFFFF);
+  static const Color textColorDark =  Color.fromARGB(255, 182, 182, 182);
 }

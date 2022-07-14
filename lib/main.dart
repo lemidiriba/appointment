@@ -1,3 +1,4 @@
+import 'package:apointment/pages/book_appointment.dart';
 import 'package:apointment/pages/phone_call_page.dart';
 import 'package:apointment/pages/profile_page_one.dart';
 import 'package:apointment/pages/profile_page_two.dart';
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
        
         primarySwatch: Colors.blue,
       ),
-      home: TrainerProfilePageLocation(),
+      home: BookAppointment(),
       
     );
   }

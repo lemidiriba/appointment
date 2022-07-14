@@ -11,7 +11,7 @@ class Dimension {
   static double height60 = screenHeight / 13;
   static double height55 = screenHeight / 14.18;
   static double height50 = screenHeight / 15.6;
-  static double height40 = screenHeight / 19.5;
+  static double height40 = screenHeight / 25;
   static double height30 = screenHeight / 26.0;
   static double height25 = screenHeight / 31.2;
   static double height20 = screenHeight / 39.0;
@@ -22,7 +22,7 @@ class Dimension {
 
   //profile page two
   static double width190 = screenWidth / 2.3684;
-  static double height150 = screenHeight / 5.2;
+  static double height150 = screenHeight / 6;
   
   
   static double pageViewTextContainer = screenHeight / 6.5;

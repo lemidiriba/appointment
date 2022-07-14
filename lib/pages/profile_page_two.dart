@@ -42,7 +42,7 @@ class _ProfilePageOneState extends State<ProfilePageTwo> {
                     color: AppColors.textColor.withOpacity(0.8),
                   ),
                   const SmallText(
-                    text: "Profile",
+                    text: "Profile Two",
                     size: 14,
                   ),
                   Icon(

@@ -2,23 +2,26 @@ import 'dart:convert';
 
 import 'package:apointment/constants/colors.dart';
 import 'package:apointment/utility/dimention.dart';
+import 'package:apointment/widgets/article_item.dart';
 import 'package:apointment/widgets/big_text.dart';
+import 'package:apointment/widgets/circulat_image.dart';
 import 'package:apointment/widgets/column_text.dart';
 import 'package:apointment/widgets/custom_bottom_navigation_bar.dart';
 import 'package:apointment/widgets/included_program.dart';
 import 'package:apointment/widgets/larg_button.dart';
 import 'package:apointment/widgets/rectangle_image.dart';
 import 'package:apointment/widgets/small_text.dart';
+import 'package:apointment/widgets/trainer_profile_rating.dart';
 import 'package:flutter/material.dart';
 
-class ProfilePageOne extends StatefulWidget {
-  ProfilePageOne({Key? key}) : super(key: key);
+class BookAppointment extends StatefulWidget {
+  BookAppointment({Key? key}) : super(key: key);
 
   @override
-  State<ProfilePageOne> createState() => _ProfilePageOneState();
+  State<BookAppointment> createState() => _ProfilePageOneState();
 }
 
-class _ProfilePageOneState extends State<ProfilePageOne> {
+class _ProfilePageOneState extends State<BookAppointment> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,18 +38,24 @@ class _ProfilePageOneState extends State<ProfilePageOne> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Icon(
-                    Icons.menu,
-                    color: AppColors.textColor.withOpacity(0.8),
+                  IconButton(
+                    onPressed: () {},
+                    icon: Icon(
+                      Icons.arrow_back,
+                      color: AppColors.textColor.withOpacity(0.8),
+                    ),
                   ),
                   const SmallText(
-                    text: "Profile One",
+                    text: "Book an Appointment",
                     size: 14,
                   ),
-                  Icon(
-                    Icons.map,
-                    color: AppColors.textColor.withOpacity(0.8),
-                  ),
+                  IconButton(
+                    onPressed: () {},
+                    icon: Icon(
+                      Icons.map,
+                      color: AppColors.textColor.withOpacity(0.8),
+                    ),
+                  )
                 ],
               ),
             ),
@@ -66,6 +75,7 @@ class _ProfilePageOneState extends State<ProfilePageOne> {
                 ),
               ),
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Row(
                     children: [
@@ -73,70 +83,60 @@ class _ProfilePageOneState extends State<ProfilePageOne> {
                         image: 'assets/team-2.jpg',
                       ),
                       SizedBox(
-                        width: Dimension.height70,
+                        width: Dimension.width10,
                       ),
                       Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: const [
-                          BigText(text: "Piff Jenkins"),
+                          BigText(
+                            text: "Piff Jenkins",
+                          ),
                           SizedBox(
                             height: 10,
                           ),
-                          SmallText(text: "#Jpiff_enkins")
+                          ColumnText(
+                              textOne: "Ethiopia",
+                              textTwo: "Jimma Main Campus"),
                         ],
-                      )
+                      ),
                     ],
                   ),
                   const SizedBox(
                     height: 15,
                   ),
-                  GestureDetector(
-                    child: const LargButton(text: "Edit Profile"),
-                    onTap: () {},
-                  ),
-                  const SizedBox(
-                    height: 5,
-                  ),
                   const Divider(
-                    height: 10,
+                    height: 15,
                     color: AppColors.bgColor,
                   ),
                   Container(
-                    margin: const EdgeInsets.only(top: 20, bottom: 10),
-                    height: Dimension.height55,
+                    margin: EdgeInsets.only(top: Dimension.height20),
                     child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Container(
-                          margin: const EdgeInsets.only(left: 30, right: 30),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: const [
-                              ColumnText(
-                                textOne: "My Progarms",
-                                textTwo: "27",
-                                alighnStart: false,
-                              ),
-                              ColumnText(
-                                textOne: "My Trainers",
-                                textTwo: "27",
-                                alighnStart: false,
-                              )
-                            ],
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const SmallText(text: "Appointment For"),
+                          SizedBox(
+                            height: Dimension.height10,
                           ),
-                        ),
-                        const SizedBox(
-                          height: 15,
-                        ),
-                      ],
-                    ),
-                  ),
-                  Expanded(
-                    child: SingleChildScrollView(
-                        child: Column(
-                      children: List.generate(4, (index) {
-                        return IncludedProgram(image: 'assets/team-${index +1}.jpg',textOne: "Piff Jack", textTwo: "#piff_jack", smallText: "931 Oclohama Ny - 150m away",);
-                      }),
-                    )),
+                          TextFormField(
+                            
+                            cursorColor: AppColors.textColorDark,
+                            style: TextStyle(
+                              color: AppColors.textColorDark,
+                            ),
+                            decoration: const InputDecoration(
+                              filled:true,
+                              fillColor: AppColors.bgColor,
+                              hintText: "Name, Sure Name",
+                              hintStyle: TextStyle(
+                                color: AppColors.textColorDark,
+                              ),
+                              enabledBorder: OutlineInputBorder(
+                                borderSide:
+                                    BorderSide(color: AppColors.bgColor),
+                              ),
+                            ),
+                          )
+                        ]),
                   )
                 ],
               ),
