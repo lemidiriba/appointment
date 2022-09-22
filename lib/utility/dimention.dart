@@ -5,6 +5,9 @@ class Dimension {
   static double screenWidth = Get.width;
 
   //container height 
+  static double height220 = screenHeight / 3.72;
+  static double height200 = screenHeight / 4.1;
+  static double height150 = screenHeight / 6;
   static double height100 = screenHeight / 7.80;
   static double height80 = screenHeight / 9.75;
   static double height70 = screenHeight / 11.14;
@@ -17,12 +20,14 @@ class Dimension {
   static double height20 = screenHeight / 39.0;
   static double height10 = screenHeight / 78.0;
 
+
   static double width10 = screenWidth / 45;
+  static double width80 = screenWidth / 5.24;
 
 
   //profile page two
   static double width190 = screenWidth / 2.3684;
-  static double height150 = screenHeight / 6;
+  
   
   
   static double pageViewTextContainer = screenHeight / 6.5;

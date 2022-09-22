@@ -111,32 +111,85 @@ class _ProfilePageOneState extends State<BookAppointment> {
                   Container(
                     margin: EdgeInsets.only(top: Dimension.height20),
                     child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          const SmallText(text: "Appointment For"),
-                          SizedBox(
-                            height: Dimension.height10,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const SmallText(text: "Appointment For"),
+                        SizedBox(
+                          height: Dimension.height10,
+                        ),
+                        TextFormField(
+                          cursorColor: AppColors.textColorDark,
+                          style: TextStyle(
+                            color: AppColors.textColorDark,
                           ),
-                          TextFormField(
-                            
-                            cursorColor: AppColors.textColorDark,
-                            style: TextStyle(
+                          decoration: const InputDecoration(
+                            filled: true,
+                            fillColor: AppColors.bgColor,
+                            hintText: "Name, Sure Name",
+                            hintStyle: TextStyle(
                               color: AppColors.textColorDark,
                             ),
-                            decoration: const InputDecoration(
-                              filled:true,
-                              fillColor: AppColors.bgColor,
-                              hintText: "Name, Sure Name",
-                              hintStyle: TextStyle(
-                                color: AppColors.textColorDark,
-                              ),
-                              enabledBorder: OutlineInputBorder(
-                                borderSide:
-                                    BorderSide(color: AppColors.bgColor),
-                              ),
+                            enabledBorder: OutlineInputBorder(
+                              borderSide: BorderSide(color: AppColors.bgColor),
                             ),
-                          )
-                        ]),
+                          ),
+                        ),
+                        SizedBox(
+                          height: Dimension.height10,
+                        ),
+                        TextFormField(
+                          cursorColor: AppColors.textColorDark,
+                          style: TextStyle(
+                            color: AppColors.textColorDark,
+                          ),
+                          decoration: const InputDecoration(
+                            filled: true,
+                            fillColor: AppColors.bgColor,
+                            hintText: "Contact Number",
+                            hintStyle: TextStyle(
+                              color: AppColors.textColorDark,
+                            ),
+                            enabledBorder: OutlineInputBorder(
+                              borderSide: BorderSide(color: AppColors.bgColor),
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          height: Dimension.height10,
+                        ),
+                        BigText(
+                          text: "Who Comes with you?",
+                          size: 14,
+                        ),
+                        SizedBox(
+                          height: Dimension.height10,
+                        ),
+                        Container(
+                          height: Dimension.height220 ,
+                          // color: AppColors.textColorDark,
+                          child: ListView.builder(
+                            scrollDirection: Axis.horizontal,
+                              itemCount: 6,
+                              itemBuilder: (context, index) {
+                                return Container(
+                                  decoration: BoxDecoration(
+                                  color: AppColors.bgColor,
+                                  borderRadius: BorderRadius.circular(Dimension.height10)
+                                  ),
+                                  margin: EdgeInsets.only(bottom: Dimension.height10, top: Dimension.height10,left: Dimension.height10,right:  Dimension.height10),
+                                  width:145,
+                                  child: Text('$index'),
+                                );
+                              }),
+                        ),
+                        SizedBox(
+                          height: Dimension.height10,
+                        ),
+                        Align(
+                            alignment: Alignment.center,
+                            child: LargButton(text: "Next"))
+                      ],
+                    ),
                   )
                 ],
               ),
